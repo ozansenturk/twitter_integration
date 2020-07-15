@@ -1,4 +1,4 @@
-# twitter_integration
+# twitter rest integration
 
 This is a software as a service project based on the Twelve-Factor design
 https://12factor.net/
