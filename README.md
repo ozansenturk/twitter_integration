@@ -19,6 +19,46 @@ proper formaters are applied https://12factor.net/logs
 swagger out of box
 1. Tests are written with pytest
 
+#Installation
+place an env. file into the root directory within the content below
+
+Directory structure
+```python
+├── README.md
+├── backend
+│   ├── __init__.py
+│   └── services.py
+├── config.py
+├── data
+├── .env
+├── http.ini
+├── requirements.txt
+├── rest
+│   ├── __init__.py
+│   └── twitter_namespace.py
+├── static
+│   └── file.txt
+├── templates
+├── tests
+│   ├── __init__.py
+│   ├── conftest.py
+│   └── test_auth.py
+└── wsgi.py
+
+```
+Envrionment variables
+```.env
+API_KEY="*******"
+API_SECRET_KEY="*******"
+ACCESS_TOKEN="*******"
+ACCESS_SECRET="********"
+BASE_URL = "https://api.twitter.com/"
+URL_AUTH="oauth2/token"
+URL_SEARCH="1.1/search/tweets.json"
+
+```
+
+Installation
 ```python
 python3 -m venv venv
 
@@ -29,3 +69,9 @@ pip install -r requirements.txt
 uwsgi http.ini
 
 ```
+Test
+```python
+python3 $(which py.test)
+```
+
+
